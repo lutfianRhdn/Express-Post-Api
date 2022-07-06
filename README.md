@@ -1,32 +1,35 @@
-
 # Express Post
 
 Project Ini adalah Express Starter Api
 
-
-
 ## Installation
 
-
-Clone Repository 
+Clone Repository
 
 ```bash
-  git clone https://github.com/lutfianRhdn/Express-Post-Api.git 
+  git clone https://github.com/lutfianRhdn/Express-Post-Api.git
 ```
-    
+
+Create .env
+
+```bash
+  cp .env.example .env
+```
+
 Install depedencies with npm
 
 ```bash
+
   cd Express-Post-Api/
-  npm install 
+  npm install
 ```
-    
-Run Project 
+
+Run Project
 
 ```bash
-  npm start 
+  npm start
 ```
-    
+
 ## API Reference
 
 #### Register User
@@ -35,11 +38,11 @@ Run Project
   POST /api/auth/register
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `name` | `string` | **Required**. Your Name |
-| `email` | `string` | **Required**. Your Email |
-| `password` | `string` | **Required**. Password |
+| Parameter  | Type     | Description              |
+| :--------- | :------- | :----------------------- |
+| `name`     | `string` | **Required**. Your Name  |
+| `email`    | `string` | **Required**. Your Email |
+| `password` | `string` | **Required**. Password   |
 
 #### Login User
 
@@ -47,11 +50,10 @@ Run Project
   POST /api/auth/login
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `email` | `string` | **Required**.  |
+| Parameter  | Type     | Description   |
+| :--------- | :------- | :------------ |
+| `email`    | `string` | **Required**. |
 | `password` | `string` | **Required**. |
-
 
 #### Get Access Toeken
 
@@ -65,14 +67,11 @@ Run Project
   POST /api/auth/refresh-token
 ```
 
-
 #### Get All Post
 
 ```http
   get /api/post/
 ```
-
-
 
 #### Get detail Post
 
@@ -80,23 +79,18 @@ Run Project
   GET /api/post/${id}
 ```
 
-
 #### Create Post
 
 ```http
   POST /api/post/
 ```
 
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `title` | `string` | **Required**.    |
-| `desc` | `string` | **Required**.  |
-
-
+| Parameter | Type     | Description   |
+| :-------- | :------- | :------------ |
+| `title`   | `string` | **Required**. |
+| `desc`    | `string` | **Required**. |
 
 Takes two numbers and returns the sum.
-
 
 #### Update Post
 
@@ -104,11 +98,10 @@ Takes two numbers and returns the sum.
   PUT /api/post/${id}
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `title` | `string` | **Required**.    |
-| `desc` | `string` | **Required**.  |
-
+| Parameter | Type     | Description   |
+| :-------- | :------- | :------------ |
+| `title`   | `string` | **Required**. |
+| `desc`    | `string` | **Required**. |
 
 #### Delete Post
 
@@ -118,5 +111,4 @@ Takes two numbers and returns the sum.
 
 ## Authors
 
-- [@lutfianRhdn](https://www.github.com/lutfianRhdn)
-
+-    [@lutfianRhdn](https://www.github.com/lutfianRhdn)
