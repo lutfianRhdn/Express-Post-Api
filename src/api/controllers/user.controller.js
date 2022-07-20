@@ -40,18 +40,23 @@ module.exports = {
 		const { name, email, password } = req.body;
 		try {
 			const passwordHashed = await bcrypt.hash(password, 10);
-			const user = await User.create({
+			const user = await User.findOne({ email });
+			console.log(user);
+			if (user)
+				return response(
+					res,
+					{ message: "User already exists" },
+					400
+				);
+
+			const newUser = await User.create({
 				name,
 				email,
 				password: passwordHashed,
 			});
-			return response(res, { user }, 200);
+			return response(res, newUser, 200);
 		} catch (err) {
-			error = Object.keys(err.errors).map((key) => {
-				return { [key]: err.errors[key].message };
-			});
-
-			return response(res, error, 400);
+			return response(res, err, 400);
 		}
 	},
 	logout: async (req, res) => {

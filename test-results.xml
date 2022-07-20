@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0230" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2022-07-18T06:05:28" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Auth" timestamp="2022-07-18T06:05:28" tests="0" file="/home/br4nchs/Documents/CODELABS/ExpressJs/src/api/test/auth.test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Login" timestamp="2022-07-18T06:05:28" tests="1" file="/home/br4nchs/Documents/CODELABS/ExpressJs/src/api/test/auth.test.js" time="0.0220" failures="1">
+    <testcase name="Auth Login should return a token" time="0.0200" classname="should return a token">
+      <failure message="expected {} to have property &apos;token&apos;" type="AssertionError"><![CDATA[AssertionError: expected {} to have property 'token'
+    at Context.<anonymous> (src/api/test/auth.test.js:14:29)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
